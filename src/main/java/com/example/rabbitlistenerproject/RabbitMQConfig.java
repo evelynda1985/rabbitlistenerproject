@@ -34,6 +34,6 @@ public class RabbitMQConfig {
         simpleMessageListenerContainer.setConnectionFactory(connectionFactory());
         simpleMessageListenerContainer.setQueues(myQueue());
         simpleMessageListenerContainer.setMessageListener(new RabbitMQMessageListener());
-        return messageListenerContainer();
+        return simpleMessageListenerContainer;
     }
 }
